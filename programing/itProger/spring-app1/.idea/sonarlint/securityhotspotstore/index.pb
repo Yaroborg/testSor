@@ -1,0 +1,27 @@
+
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+W
+'src/main/java/org/example/TestBean.java,c\2\c2e132f5197e251aba1c0681d338764caa99d96e
+Y
+)src/main/resources/applicationContext.txt,b\5\b538aa75b85be415779a88e876d22dcd08558e4c
+O
+src/main/webapp/WEB-INF/web.xml,2\e\2e22b6edd746fa3dc40ad7276c87c8d87d72a392
+Y
+)src/main/resources/application.Contex.xml,6\d\6d4bc9ab1fc2ba2085b82fe17b5986498d6cfa17
+Y
+)src/main/java/org/example/TestSpring.java,8\2\82a5a4fcfaf2dbc8341cabe76b3a047005b68c43
+T
+$src/main/java/org/example/Music.java,8\0\806b58904e68f8337e2feb0f980b13513f2654d8
+]
+-src/main/java/org/example/ClassicalMusic.java,7\c\7c367aae3bfdeb4f9a689c1cb72cfd03b4f32b4f
+X
+(src/main/java/org/example/RockMusik.java,d\b\dbfffe9958171698181848ee562b1a3f62cb26ff
+Z
+*src/main/java/org/example/MusicPlayer.java,8\4\84e5d19a5e3b7b4efacd85ccba351365b6e432ba
+X
+(src/main/resources/applicationContex.xml,8\2\8249184cebee1b3039bb0fd25c6ea214c8710587
+W
+'src/main/java/org/example/RapMusic.java,1\8\18b7febd68cb39feffbd689025396108050cd915
+Y
+)src/main/resources/musicPlayer.properties,e\a\ea1468302047bdc3406502196822e83e7676fc35
