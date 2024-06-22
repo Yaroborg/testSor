@@ -2,11 +2,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Users</title>
+    <title>User List</title>
 </head>
 <body>
 <h2>Users</h2>
-<a href="users/add">Add User</a>
+<a href="${pageContext.request.contextPath}/users/new">Add User</a>
 <table border="1">
     <tr>
         <th>ID</th>
@@ -20,11 +20,15 @@
             <td>${user.name}</td>
             <td>${user.email}</td>
             <td>
-                <a href="users/edit?id=${user.id}">Edit</a>
-                <a href="users/delete?id=${user.id}">Delete</a>
+                <a href="${pageContext.request.contextPath}/users/edit?id=${user.id}">Edit</a>
+                <form action="${pageContext.request.contextPath}/users/delete" method="post" style="display:inline;">
+                    <input type="hidden" name="id" value="${user.id}">
+                    <input type="submit" value="Delete">
+                </form>
             </td>
         </tr>
     </c:forEach>
 </table>
 </body>
 </html>
+

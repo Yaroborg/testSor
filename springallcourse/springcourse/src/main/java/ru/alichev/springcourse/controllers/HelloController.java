@@ -8,9 +8,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class HelloController {
     @Value("${hello}")
     private String hello;
+
     @GetMapping("/hello")
-    public String Hello() {
+    public String hello() {
         System.out.println(this.hello);
-        return hello;
+        return "hello" ;
     }
 }

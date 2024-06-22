@@ -1,10 +1,10 @@
-package web.service;
+package spring.app.spring_mvc.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import web.dao.UserDao;
-import web.model.User;
+import spring.app.spring_mvc.dao.UserDao;
+import spring.app.spring_mvc.model.User;
 
 import java.util.List;
 

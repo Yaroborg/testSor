@@ -1,4 +1,4 @@
-package web.model;
+package spring.app.spring_mvc.model;
 
 import jakarta.persistence.*;
 

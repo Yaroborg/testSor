@@ -7,14 +7,6 @@ d
 4src/main/java/com/example/config/AppInitializer.java,5\4\54cfe36ea7ce69ce7f375bac99bfb41b3143283e
 _
 /src/main/java/com/example/config/AppConfig.java,e\0\e0f2cd9245d9d89d3c7583b84e6961ae85e77857
-`
-0src/main/java/com/example/config/model/User.java,2\7\2732c531898740b4ece0ac9438de35f8d8dc32ad
-o
-?src/main/java/com/example/config/repository/UserRepository.java,4\3\43c8bba28dec99131b387907bee9fe6b01816866
-i
-9src/main/java/com/example/config/service/UserService.java,2\7\27873e541b6c842e540ff20c812b860c4b4f9cc7
-m
-=src/main/java/com/example/config/service/UserServiceImpl.java,1\4\14cc2b03383e3e5b89da9ac36c6856b641ff37bc
 d
 4src/main/java/com/example/config/UserController.java,2\5\2520209d51ca97c038dbde9b205650702780ea6f
 [
@@ -22,12 +14,14 @@ d
 [
 +src/main/webapp/WEB-INF/views/user-list.jsp,d\b\db78e26cd2302bcaa29bf0e6347b6ab20d7c9f62
 f
-6src/main/java/com/example/config/config/AppConfig.java,e\7\e7030fab87bac9c0311f86f600268739a548ab11
-k
-;src/main/java/com/example/config/config/AppInitializer.java,6\c\6c45c1ca83dcb3c5689bf804ea6ef73ffaf88480
-k
-;src/main/java/com/example/config/config/UserController.java,2\f\2ffe24fd5ff70f5ad2a85b261c27b1a3ced2ceb8
-f
-6src/main/java/com/example/config/config/WebConfig.java,8\8\881d5bf4d763cd384014978f347f889ec130f8d1
-f
 6src/main/java/com/example/service/UserServiceImpl.java,1\d\1d7eec6f93d35fe9d3c6ea3ede8d2bde8a8fac9a
+I
+src/main/webapp/index.jsp,8\e\8e6d3b70c9f5b02570779b0441540d45eceb0ded
+Y
+)src/main/java/com/example/model/User.java,e\d\edb6e48ee8fca4e381c8712fcab355a562b4aea3
+h
+8src/main/java/com/example/repository/UserRepository.java,c\a\ca2b7ec3237d37dfde531cd95db1e70d922ef4cb
+b
+2src/main/java/com/example/service/UserService.java,6\e\6e3d881a37ae89f3419de235980ae95d7d6d2f20
+O
+src/main/webapp/WEB-INF/web.xml,2\e\2e22b6edd746fa3dc40ad7276c87c8d87d72a392

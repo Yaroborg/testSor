@@ -47,13 +47,6 @@ public class SecurityConfig {
 
         JdbcUserDetailsManager jdbcUserDetailsManager = new JdbcUserDetailsManager(dataSource);
 
-        if (jdbcUserDetailsManager.userExists(user.getUsername())) {
-            jdbcUserDetailsManager.deleteUser(user.getUsername());
-        }
-        if (jdbcUserDetailsManager.userExists(admin.getUsername())) {
-            jdbcUserDetailsManager.deleteUser(admin.getUsername());
-        }
-
         jdbcUserDetailsManager.createUser(user);
         jdbcUserDetailsManager.createUser(admin);
 

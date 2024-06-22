@@ -1,3 +1,5 @@
 
-“
-java:S1192$"PDefine a constant instead of duplicating this literal "redirect:/users" 3 times.(Ñ“é8ºÓææı1J$17956740-5cf0-4bd2-ae9e-5f1f1681ef94
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ãùÕèı1J$ce15c9d7-9296-4d22-afb6-c29a7c30d8f4
+ƒ
+java:S4684)"@Replace this persistent entity with a simple POJO or DTO object.(Æ®Æ8óùÕèı1J$cfef7fa9-455b-4f37-82d2-e4ae08fa9e8d

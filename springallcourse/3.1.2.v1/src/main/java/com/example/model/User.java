@@ -1,8 +1,7 @@
-package com.example312.v1.model;
+package com.example.model;
 
 import jakarta.persistence.*;
-
-import javax.validation.constraints.*;
+import jakarta.validation.constraints.*;
 import java.util.Objects;
 
 @Entity

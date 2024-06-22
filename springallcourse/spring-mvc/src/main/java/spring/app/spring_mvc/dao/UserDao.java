@@ -1,10 +1,11 @@
-package web.dao;
+package spring.app.spring_mvc.dao;
 
-import web.model.User;
+import spring.app.spring_mvc.model.User;
 
 import java.util.List;
 
 public interface UserDao {
+
     List<User> getUsersList();
 
     void delete(User user);

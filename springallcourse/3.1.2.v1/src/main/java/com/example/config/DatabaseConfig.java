@@ -1,5 +1,5 @@
-package com.example312.v1.config;
-
+package com.example.config;
+import jakarta.persistence.EntityManagerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -12,16 +12,15 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-
 import javax.sql.DataSource;
 import java.util.Objects;
 import java.util.Properties;
 
 
 @Configuration
-@PropertySource("classpath:db.properties")
+@PropertySource("classpath:application.properties")
 @EnableTransactionManagement
-@ComponentScan(value = "web.model")
+@ComponentScan(value = "com.example.model")
 public class DatabaseConfig {
 
     private final Environment env;
@@ -34,24 +33,24 @@ public class DatabaseConfig {
     @Bean
     public DataSource getDataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName(Objects.requireNonNull(env.getProperty("db.driver")));
-        dataSource.setUrl(env.getProperty("db.url"));
-        dataSource.setUsername(env.getProperty("db.username"));
-        dataSource.setPassword(env.getProperty("db.password"));
+        dataSource.setDriverClassName(Objects.requireNonNull(env.getProperty("application.driver")));
+        dataSource.setUrl(env.getProperty("application.url"));
+        dataSource.setUsername(env.getProperty("application.username"));
+        dataSource.setPassword(env.getProperty("application.password"));
 
         return dataSource;
     }
 
     @Bean
-    public LocalContainerEntityManagerFactoryBean getEntinyManagerFactory() {
+    public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         LocalContainerEntityManagerFactoryBean entityManager = new LocalContainerEntityManagerFactoryBean();
         entityManager.setDataSource(getDataSource());
-        entityManager.setPackagesToScan("web.model");
+        entityManager.setPackagesToScan("com.example.model");
         entityManager.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
 
         Properties props = new Properties();
-        props.put("hibernate.show_sql", env.getProperty("hibernate.show_sql"));
-        props.put("hibernate.hbm2ddl.auto", env.getProperty("hibernate.hbm2ddl.auto"));
+        props.put("hibernate.show_sql", env.getProperty("spring.jpa.properties.hibernate.show_sql"));
+        props.put("hibernate.hbm2ddl.auto", env.getProperty("spring.jpa.properties.hibernate.hbm2ddl.auto"));
 
         entityManager.setJpaProperties(props);
 
@@ -59,10 +58,11 @@ public class DatabaseConfig {
     }
 
     @Bean
-    public PlatformTransactionManager getTransactionManager() {
+    public PlatformTransactionManager transactionManager(EntityManagerFactory entityManagerFactory) {
         JpaTransactionManager transactionManager = new JpaTransactionManager();
-        transactionManager.setEntityManagerFactory(getEntinyManagerFactory().getObject());
+        transactionManager.setEntityManagerFactory(entityManagerFactory);
 
         return transactionManager;
     }
+
 }

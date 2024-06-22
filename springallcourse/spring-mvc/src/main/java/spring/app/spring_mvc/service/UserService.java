@@ -1,7 +1,6 @@
-package web.service;
+package spring.app.spring_mvc.service;
 
-import web.model.User;
-
+import spring.app.spring_mvc.model.User;
 import java.util.List;
 
 public interface UserService {

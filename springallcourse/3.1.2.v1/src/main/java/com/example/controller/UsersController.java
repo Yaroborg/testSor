@@ -1,5 +1,7 @@
-package com.example312.v1.controller;
+package com.example.controller;
 
+import com.example.model.User;
+import com.example.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -9,10 +11,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import web.model.User;
-import web.service.UserService;
 
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 
 @Controller
 public class UsersController {
@@ -43,11 +43,11 @@ public class UsersController {
     public String saveUser(@Valid @ModelAttribute("user") User user, BindingResult bindingResult, Model model) {
         if (bindingResult.hasErrors()) {
             logger.debug("Validation errors found while saving user: {}", bindingResult.getAllErrors());
-            return "info"; // Возвращаем страницу с формой для редактирования пользователя
+            return "info";
         }
         logger.debug("Request received to save user: {}", user);
         userService.save(user);
-        return "redirect:/"; // Перенаправляем на главную страницу
+        return "redirect:/";
     }
 
     @GetMapping(value = "/edit")

@@ -1,7 +1,6 @@
-package com.example312.v1.dao;
+package com.example.dao;
 
-import web.model.User;
-
+import com.example.model.User;
 import java.util.List;
 
 public interface UserDao {

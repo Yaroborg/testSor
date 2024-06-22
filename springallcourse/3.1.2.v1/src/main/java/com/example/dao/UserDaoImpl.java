@@ -1,12 +1,12 @@
-package com.example312.v1.dao;
+package com.example.dao;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
-import web.model.User;
-
+import com.example.model.User;
 import java.util.List;
+
 
 @Component
 public class UserDaoImpl implements UserDao {
