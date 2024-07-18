@@ -1,0 +1,13 @@
+package ru.javabegin.micro.demo.eurecaclient;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class EurecaClientApplicationTests {
+
+    @Test
+    void contextLoads() {
+    }
+
+}

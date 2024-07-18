@@ -17,4 +17,14 @@ public class MainController {
     public String pageForAuthenticatedUser(Principal principal) {
         return "secured part of web service " + principal.getName();
     }
+
+    @GetMapping("/read_profile")
+    public String pageForReadProfile() {
+        return "read profile ";
+    }
+
+    @GetMapping("/only_for_admins")
+    public String pageForAdmins() {
+        return "Admin page";
+    }
 }

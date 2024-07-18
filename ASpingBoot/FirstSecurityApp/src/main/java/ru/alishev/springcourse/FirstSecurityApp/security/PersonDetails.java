@@ -11,6 +11,7 @@ import java.util.List;
 public class PersonDetails implements UserDetails, Serializable {
 
     private final Person person;
+
     public PersonDetails(Person person) {
         this.person = person;
     }

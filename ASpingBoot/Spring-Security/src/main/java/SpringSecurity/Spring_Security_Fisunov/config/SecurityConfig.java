@@ -22,6 +22,8 @@ public class SecurityConfig {
                 .authorizeRequests(authorizeRequests -> authorizeRequests
                         .requestMatchers("/authenticated").authenticated()
                         .anyRequest().permitAll()
+                        .requestMatchers("/only_for_admins").hasRole("ADMIN")
+
                 )
                 .formLogin(formLogin -> formLogin
                         .permitAll()
@@ -32,7 +34,7 @@ public class SecurityConfig {
         return http.build();
     }
 
-    @Bean
+   /* @Bean
     public UserDetailsService users(DataSource dataSource) {
         UserDetails user = User.builder()
                 .username("user")
@@ -51,6 +53,7 @@ public class SecurityConfig {
         jdbcUserDetailsManager.createUser(admin);
 
         return jdbcUserDetailsManager;
-    }
+    }*/
+
 }
 

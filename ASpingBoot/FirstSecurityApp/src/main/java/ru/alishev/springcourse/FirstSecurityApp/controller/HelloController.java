@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import ru.alishev.springcourse.FirstSecurityApp.security.PersonDetails;
 
 @Controller
-public class HelloController {
+public class  HelloController {
 
     @GetMapping("/hello")
     public String sayHello() {
