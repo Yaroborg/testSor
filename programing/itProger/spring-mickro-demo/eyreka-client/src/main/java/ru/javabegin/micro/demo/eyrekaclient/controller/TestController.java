@@ -1,12 +1,9 @@
-package ru.javabegin.micro.demo.eurecaclient.controller;
-
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+package ru.javabegin.micro.demo.eyrekaclient.controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@EnableDiscoveryClient
-public class TestControler {
+public class TestController {
     @GetMapping("/test")
     public String test() {
         return "test";
