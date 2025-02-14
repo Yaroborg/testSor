@@ -1,3 +1,6 @@
 rootProject.name = "spring-mickro-demo"
 
-include "eureka-server"
+includeBuild'eureka-server'
+includeBuild'eureka-client'
+includeBuild'api-gateway'
+includeBuild'eureka-client-2'
