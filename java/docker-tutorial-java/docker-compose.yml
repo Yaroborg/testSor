@@ -1,0 +1,23 @@
+services:
+  mypg:
+    image: postgres:16
+    container_name: mypg
+    environment:
+      POSTGRES_USER: demo
+      POSTGRES_PASSWORD: demo
+      POSTGRES_DB: postgres
+    ports:
+      - "5432:5432"
+
+  app:
+    build: .
+    container_name: java-app
+    environment:
+      SERVER_PORT: "8081"
+      DB_URL: "jdbc:postgresql://mypg:5432/postgres"
+      DB_USERNAME: "demo"
+      DB_PASSWORD: "demo"
+    ports:
+      - "8081:8081"
+    depends_on:
+      - mypg

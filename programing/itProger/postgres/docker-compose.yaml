@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  db:
+    # 1. Используем конкретную стабильную версию, а не latest
+    image: postgres:16
+    container_name: my-postgres-idea
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: mysecretpassword
+      # 2. Явно указываем, где лежат данные (иногда это лечит ошибку)
+      PGDATA: /var/lib/postgresql/data/pgdata
+    ports:
+      # Оставляем ваш порт 5455, чтобы не конфликтовать
+      - "5455:5432"
+    volumes:
+      # 3. ВАЖНО: Я изменил имя тома на 'postgres_data_new'.
+      # Docker создаст его с нуля.
+      - postgres_data_new:/var/lib/postgresql/data
+
+volumes:
+  postgres_data_new:
