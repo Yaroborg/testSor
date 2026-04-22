@@ -5,4 +5,9 @@ public class TestCommit {
  int B = 9;
  int C = 10;
  int i = 111
+ int B = 9;
+ int C = 10;
+ int e = 11;
+ int f = 12;
+ int g = 13;
 }
